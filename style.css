@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+      background: url(/images/bg_main2.gif);
+  }
+
+main {
+      height: 100%;  
+}
+
+  .navbar {
+    background: black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    top: 0;
+    z-index: 999;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  #navbar_logo {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .navbar-item {
+    height: 80px;
+  }
+
+  .navbar_links {
+    color: #D2738A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .navbar_links:hover {
+      color: white;
+      transition: all 0.3s ease;
+  }
+
+  @media screen and (max-width: 960px) {
+      .navbar-container {
+          display: flex;
+          justify-content: space-between;
+          height: 80px;
+          z-index: 1;
+          width: 100%;
+          max-width: 1300px;
+          padding: 0;
+      }
+
+      .navbar-menu {
+          display: grid;
+          grid-template-columns: auto;
+          margin: 0;
+          width: 100%;
+          position: absolute;
+          top: -1000px;
+          opacity: 1;
+          transition: all 0.5s ease;
+          z-index: -1;
+      }
+
+      .navbar-menu.active {
+          background: black;
+          top: 100%;
+          opacity: 1;
+          transition: all 0.5s ease;
+          z-index: 99;
+          height: 60vh;
+          font-size: 1.64rem;
+      }
+
+      .navbar-toggle .bar {
+          width: 25px;
+          height: 3px;
+          margin: 5px auto;
+          transition: all 0.3s ease-in-out;
+          background: white;
+      }
+
+      .navbar-item {
+          width: 100%;
+      }
+
+      .navbar_links {
+          text-align: center;
+          padding: 2rem;
+          width: 100%;
+          display: table;
+      }
+
+      #mobile-menu {
+          position: absolute;
+          top: 20%;
+          right: 5%;
+          transform: translate(5%, 20%);
+      }
+
+      #mobile-side { display: none; }
+
+      .navbar-toggle .bar {
+          display: block;
+          cursor: pointer;
+      }
+
+      #mobile-menu.is-active .bar:nth-child(2) {
+          opacity: 0;
+      }
+
+      #mobile-menu.is-active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+    }
+
+      #mobile-menu.is-active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  .side-container {
+    right: 0;
+    text-align: center;
+    background: black;
+    color: #D2738A;
+    padding: 30px 40px;
+    margin-top: 40px;
+    position: fixed;
+  }
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.side-container h3 {
+  margin-top: 10px;
+}
+
+.content {
+  text-align: center;
+  float: left;
+  margin-top: 40px;
+  margin-left: 80px;
+  width: 70%;
+  display: flexbox;
+  overflow: hidden;
+}
+
+.content p{
+  margin-top: 40px;
+  letter-spacing: 8px;
+  color: #D2738A;
+}
+
+.content-article {
+  background: url(/images/bg-rip-02.gif);
+  margin-bottom: 40px;
+  image-rendering: pixelated;
+  padding: 40px;
+}
+
+.images {
+  width: 50%;
+  height: 50%;
+}
+
+.about {
+  background: url(/images/bg-rip-02.gif);
+  padding: 40px;
+  margin-bottom: 40px;
+  image-rendering: pixelated;
+}
+
+.about a{
+  text-decoration: none;
+  color: white;
+}
+
+.section-footer {
+  background-color: black;
+  color: #D2738A;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  clear: both;
+}
+
+.section-footer a{
+  text-decoration: none;
+  color: white;
+}
